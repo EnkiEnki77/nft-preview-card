@@ -10,6 +10,7 @@ export const MainCard  = styled.div`
     background-color: #15263F;
     padding: 24px 24px 24px 24px;
     border-radius: 15px;
+
 `;
 
 export const ImageContainer = styled.div`
@@ -17,10 +18,17 @@ export const ImageContainer = styled.div`
   max-height: 302px;
   border-radius: 8px;
   overflow: hidden;
+  position: relative;
+
+  &:hover{
+    cursor: pointer;
+   
+  }
 
   img{
-      width: 100%;
-      height: 100%;
+      max-width:100%;
+      max-height: 100%;
+      background-color: cyan;
   }
 `;
 
@@ -31,6 +39,11 @@ font-weight: 600;
 font-size: 22px;
 line-height: 28px;
 color: white;
+
+&:hover{
+  cursor: pointer;
+  color: cyan;
+}
 `;
 
 export const NftDescript = styled.p`
@@ -90,7 +103,7 @@ export const CreatorWrap = styled.div`
   }
 
   p{
-        padding-left: 10px;
+        padding-left: 1 px;
         
         font-style: normal;
         font-weight: normal;
@@ -104,7 +117,15 @@ export const CreatorWrap = styled.div`
         span{
         color: #FFFFFF;
         padding-left: 2px;
-    }
+          
+
+        &:hover{
+          color: cyan;
+          cursor: pointer;
+        }
+      }
+
+
   }
 `;
 
@@ -118,4 +139,30 @@ export const ClockIcon = styled.img`
   width: 16px;
   height: 16px;
   margin-right: 5px;
+`;
+
+export const ViewIcon = styled.img`
+  width: 48px;
+  height: 48px;
+  
+`;
+
+export const Overlay = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: cyan;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: ${props => props.display};
+  justify-content: center;
+  align-items: center;
+
+  img{
+    z-index: 40;
+    color: #ffffff;
+    opacity: 1;
+  }
 `;
