@@ -103,7 +103,7 @@ export const CreatorWrap = styled.div`
   }
 
   p{
-        padding-left: 1 px;
+        margin-left: 15px;
         
         font-style: normal;
         font-weight: normal;
