@@ -1,10 +1,14 @@
+import { AppCont } from "./components/AppCont.styles";
+import Card from "./components/Card";
+import { Globals } from "./Global.styles";
 
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <AppCont>
+      <Globals/>
+      <Card/>
+    </AppCont>
   );
 }
 
